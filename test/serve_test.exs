@@ -2,6 +2,18 @@ defmodule ServeTest do
   use ExUnit.Case
   doctest Serve
 
+  setup_all do
+    clear_env()
+    on_exit(&clear_env/0)
+  end
+
+  defp clear_env do
+    Application.delete_env(:serve, :port)
+    Application.delete_env(:serve, :path)
+    Application.delete_env(:serve, :no_index)
+    Application.delete_env(:serve, :open)
+  end
+
   test "port/0 returns the default port" do
     assert Serve.port() == 4444
 
