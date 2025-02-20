@@ -45,6 +45,7 @@ defmodule Serve.CLI do
 
         #{help()}
         """
+
         exit({:shutdown, 1})
     end
   end

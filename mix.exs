@@ -23,7 +23,7 @@ defmodule Serve.MixProject do
         extras: ["README.md", "CHANGELOG.md"]
       ],
       test_options: [docs: true],
-      test_coverage: [summary: [threshold: 85]],
+      test_coverage: [summary: [threshold: 85]]
     ]
   end
 
@@ -43,7 +43,7 @@ defmodule Serve.MixProject do
 
   defp aliases do
     [
-      install: ["deps.get", "escript.build", "escript.install"],
+      install: ["deps.get", "escript.build", "escript.install"]
     ]
   end
 
