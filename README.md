@@ -1,5 +1,10 @@
 # Serve
 
+[![Actions Status](https://github.com/quexpl/serve/workflows/CI/badge.svg)](https://github.com/quexpl/serve/actions?query=workflow%3ACI)
+[![Hex pm](https://img.shields.io/hexpm/v/serve.svg?style=flat)](https://hex.pm/packages/serve)
+[![Hexdocs badge](https://img.shields.io/badge/docs-hexdocs-purple)](https://hexdocs.pm/serve)
+
+
 **Serve** is escript to quickly start an HTTP server, similar to quick-start solutions available in other languages:
 
 ```shell
