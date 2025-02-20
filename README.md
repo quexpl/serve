@@ -92,6 +92,15 @@ $ serve s doc
 [info] Serving  /home/quex/workspace/serve/doc with Cowboy 2.13.0 at http://localhost:4444
 ```
 
+## Features
+
+- dark mode
+- directory index
+
+![dark mode](https://github.com/quexpl/serve/blob/main/images/index-dark.jpg?raw=true)
+![directory index](https://github.com/quexpl/serve/blob/main/images/index.jpg?raw=true)
+![not found](https://github.com/quexpl/serve/blob/main/images/404.jpg?raw=true)
+
 ## Security
 
 Although Serve uses the robust Cowboy HTTP server, it is not intended to be a production-ready web server. It only supports the HTTP protocol and listens on the loopback interface.
