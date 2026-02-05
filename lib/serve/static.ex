@@ -25,7 +25,7 @@ defmodule Serve.Static do
   end
 
   defp try_index(conn, runtime_opts) do
-    Path.join([Serve.static_path(), conn.path_info, "index.htm*"])
+    Path.join([Serve.static_path()] ++ conn.path_info ++ ["index.htm*"])
     |> Path.wildcard()
     |> maybe_put_index(conn, runtime_opts)
   end

@@ -36,6 +36,24 @@ defmodule Serve.StaticTest do
     assert ["/contact/"] = Plug.Conn.get_resp_header(conn, "location")
   end
 
+  test "serves index.html from nested directories" do
+    conn =
+      conn(:get, "/nested/dir/")
+      |> Router.call(%{})
+
+    assert conn.status == 200
+    assert conn.resp_body =~ "Nested Index"
+  end
+
+  test "redirects to trailing slash for nested directories with index" do
+    conn =
+      conn(:get, "/nested/dir")
+      |> Router.call(%{})
+
+    assert conn.status == 302
+    assert ["/nested/dir/"] = Plug.Conn.get_resp_header(conn, "location")
+  end
+
   test "returns 404 for missing files" do
     conn =
       conn(:get, "/missing.html")
